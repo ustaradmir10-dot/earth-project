@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Америка</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, #001a2e, #000);
+  color: white;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 40px;
+  color: #4fc3f7;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: rgba(255,255,255,0.1);
+}
+
+.flag {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.name {
+  padding: 10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <h1>🌎 Америка</h1>
+</header>
+
+<!-- ===================== -->
+<!-- 🇺🇸 СЕВЕРНАЯ АМЕРИКА -->
+<!-- ===================== -->
+
+<h2>🇺🇸 Северная Америка</h2>
+
+<div class="container">
+
+<div class="card" onclick="go('country.html?name=usa')">
+  <img class="flag" src="https://flagcdn.com/w640/us.png">
+  <div class="name">США</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=canada')">
+  <img class="flag" src="https://flagcdn.com/w640/ca.png">
+  <div class="name">Канада</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=mexico')">
+  <img class="flag" src="https://flagcdn.com/w640/mx.png">
+  <div class="name">Мексика</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=greenland')">
+  <img class="flag" src="https://flagcdn.com/w640/gl.png">
+  <div class="name">Гренландия</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=cuba')">
+  <img class="flag" src="https://flagcdn.com/w640/cu.png">
+  <div class="name">Куба</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=haiti')">
+  <img class="flag" src="https://flagcdn.com/w640/ht.png">
+  <div class="name">Гаити</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=dominican_republic')">
+  <img class="flag" src="https://flagcdn.com/w640/do.png">
+  <div class="name">Доминикана</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=guatemala')">
+  <img class="flag" src="https://flagcdn.com/w640/gt.png">
+  <div class="name">Гватемала</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=belize')">
+  <img class="flag" src="https://flagcdn.com/w640/bz.png">
+  <div class="name">Белиз</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=el_salvador')">
+  <img class="flag" src="https://flagcdn.com/w640/sv.png">
+  <div class="name">Сальвадор</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=honduras')">
+  <img class="flag" src="https://flagcdn.com/w640/hn.png">
+  <div class="name">Гондурас</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=nicaragua')">
+  <img class="flag" src="https://flagcdn.com/w640/ni.png">
+  <div class="name">Никарагуа</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=costa_rica')">
+  <img class="flag" src="https://flagcdn.com/w640/cr.png">
+  <div class="name">Коста-Рика</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=panama')">
+  <img class="flag" src="https://flagcdn.com/w640/pa.png">
+  <div class="name">Панама</div>
+</div>
+
+</div>
+
+<!-- ===================== -->
+<!-- 🇧🇷 ЮЖНАЯ АМЕРИКА -->
+<!-- ===================== -->
+
+<h2>🇧🇷 Южная Америка</h2>
+
+<div class="container">
+
+<div class="card" onclick="go('country.html?name=brazil')">
+  <img class="flag" src="https://flagcdn.com/w640/br.png">
+  <div class="name">Бразилия</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=argentina')">
+  <img class="flag" src="https://flagcdn.com/w640/ar.png">
+  <div class="name">Аргентина</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=colombia')">
+  <img class="flag" src="https://flagcdn.com/w640/co.png">
+  <div class="name">Колумбия</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=peru')">
+  <img class="flag" src="https://flagcdn.com/w640/pe.png">
+  <div class="name">Перу</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=chile')">
+  <img class="flag" src="https://flagcdn.com/w640/cl.png">
+  <div class="name">Чили</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=bolivia')">
+  <img class="flag" src="https://flagcdn.com/w640/bo.png">
+  <div class="name">Боливия</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=paraguay')">
+  <img class="flag" src="https://flagcdn.com/w640/py.png">
+  <div class="name">Парагвай</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=uruguay')">
+  <img class="flag" src="https://flagcdn.com/w640/uy.png">
+  <div class="name">Уругвай</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=ecuador')">
+  <img class="flag" src="https://flagcdn.com/w640/ec.png">
+  <div class="name">Эквадор</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=venezuela')">
+  <img class="flag" src="https://flagcdn.com/w640/ve.png">
+  <div class="name">Венесуэла</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=guyana')">
+  <img class="flag" src="https://flagcdn.com/w640/gy.png">
+  <div class="name">Гайана</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=suriname')">
+  <img class="flag" src="https://flagcdn.com/w640/sr.png">
+  <div class="name">Суринам</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=french_guiana')">
+  <img class="flag" src="https://flagcdn.com/w640/gf.png">
+  <div class="name">Французская Гвиана</div>
+</div>
+
+</div>
+
+<script>
+function go(page){
+  window.location.href = page;
+}
+</script>
+
+</body>
+</html>

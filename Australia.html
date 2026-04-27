@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Австралия и Океания</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, #001a2e, #000);
+  color: white;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: rgba(255,255,255,0.1);
+}
+
+.flag {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.name {
+  padding: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Австралия и Океания</h1>
+  <p>Выберите страну</p>
+</header>
+
+<div class="container">
+
+<!-- ОКЕАНИЯ -->
+<div class="card" onclick="go('country.html?name=australia')">
+  <img class="flag" src="https://flagcdn.com/w640/au.png">
+  <div class="name">Австралия</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=new_zealand')">
+  <img class="flag" src="https://flagcdn.com/w640/nz.png">
+  <div class="name">Новая Зеландия</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=papua_new_guinea')">
+  <img class="flag" src="https://flagcdn.com/w640/pg.png">
+  <div class="name">Папуа — Новая Гвинея</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=fiji')">
+  <img class="flag" src="https://flagcdn.com/w640/fj.png">
+  <div class="name">Фиджи</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=samoa')">
+  <img class="flag" src="https://flagcdn.com/w640/ws.png">
+  <div class="name">Самоа</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=tonga')">
+  <img class="flag" src="https://flagcdn.com/w640/to.png">
+  <div class="name">Тонга</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=solomon_islands')">
+  <img class="flag" src="https://flagcdn.com/w640/sb.png">
+  <div class="name">Соломоновы Острова</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=vanuatu')">
+  <img class="flag" src="https://flagcdn.com/w640/vu.png">
+  <div class="name">Вануату</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=kiribati')">
+  <img class="flag" src="https://flagcdn.com/w640/ki.png">
+  <div class="name">Кирибати</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=tuvalu')">
+  <img class="flag" src="https://flagcdn.com/w640/tv.png">
+  <div class="name">Тувалу</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=nauru')">
+  <img class="flag" src="https://flagcdn.com/w640/nr.png">
+  <div class="name">Науру</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=micronesia')">
+  <img class="flag" src="https://flagcdn.com/w640/fm.png">
+  <div class="name">Микронезия</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=marshall_islands')">
+  <img class="flag" src="https://flagcdn.com/w640/mh.png">
+  <div class="name">Маршалловы Острова</div>
+</div>
+
+</div>
+
+<script>
+function go(page){
+  window.location.href = page;
+}
+</script>
+
+</body>
+</html>

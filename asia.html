@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Азия</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, #001a2e, #000);
+  color: white;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: rgba(255,255,255,0.1);
+}
+
+.flag {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.name {
+  padding: 10px;
+}
+
+/* Кыргызстан выделение */
+.highlight {
+  border: 2px solid gold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Азия</h1>
+  <p>Выберите страну</p>
+</header>
+
+<div class="container">
+
+<!-- Кыргызстан (первый и выделенный) -->
+<div class="card highlight" onclick="go('country.html?name=kyrgyzstan')">
+  <img class="flag" src="https://flagcdn.com/w640/kg.png">
+  <div class="name">Кыргызстан</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=kazakhstan')">
+  <img class="flag" src="https://flagcdn.com/w640/kz.png">
+  <div class="name">Казахстан</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=tajikistan')">
+  <img class="flag" src="https://flagcdn.com/w640/tj.png">
+  <div class="name">Таджикистан</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=turkmenistan')">
+  <img class="flag" src="https://flagcdn.com/w640/tm.png">
+  <div class="name">Туркменистан</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=uzbekistan')">
+  <img class="flag" src="https://flagcdn.com/w640/uz.png">
+  <div class="name">Узбекистан</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=china')">
+  <img class="flag" src="https://flagcdn.com/w640/cn.png">
+  <div class="name">Китай</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=mongolia')">
+  <img class="flag" src="https://flagcdn.com/w640/mn.png">
+  <div class="name">Монголия</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=north_korea')">
+  <img class="flag" src="https://flagcdn.com/w640/kp.png">
+  <div class="name">Северная Корея</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=south_korea')">
+  <img class="flag" src="https://flagcdn.com/w640/kr.png">
+  <div class="name">Южная Корея</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=japan')">
+  <img class="flag" src="https://flagcdn.com/w640/jp.png">
+  <div class="name">Япония</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=brunei')">
+  <img class="flag" src="https://flagcdn.com/w640/bn.png">
+  <div class="name">Бруней</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=east_timor')">
+  <img class="flag" src="https://flagcdn.com/w640/tl.png">
+  <div class="name">Восточный Тимор</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=vietnam')">
+  <img class="flag" src="https://flagcdn.com/w640/vn.png">
+  <div class="name">Вьетнам</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=indonesia')">
+  <img class="flag" src="https://flagcdn.com/w640/id.png">
+  <div class="name">Индонезия</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=cambodia')">
+  <img class="flag" src="https://flagcdn.com/w640/kh.png">
+  <div class="name">Камбоджа</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=laos')">
+  <img class="flag" src="https://flagcdn.com/w640/la.png">
+  <div class="name">Лаос</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=malaysia')">
+  <img class="flag" src="https://flagcdn.com/w640/my.png">
+  <div class="name">Малайзия</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=myanmar')">
+  <img class="flag" src="https://flagcdn.com/w640/mm.png">
+  <div class="name">Мьянма</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=singapore')">
+  <img class="flag" src="https://flagcdn.com/w640/sg.png">
+  <div class="name">Сингапур</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=thailand')">
+  <img class="flag" src="https://flagcdn.com/w640/th.png">
+  <div class="name">Таиланд</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=philippines')">
+  <img class="flag" src="https://flagcdn.com/w640/ph.png">
+  <div class="name">Филиппины</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=afghanistan')">
+  <img class="flag" src="https://flagcdn.com/w640/af.png">
+  <div class="name">Афганистан</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=bangladesh')">
+  <img class="flag" src="https://flagcdn.com/w640/bd.png">
+  <div class="name">Бангладеш</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=azerbaijan')">
+  <img class="flag" src="https://flagcdn.com/w640/az.png">
+  <div class="name">Азербайджан</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=armenia')">
+  <img class="flag" src="https://flagcdn.com/w640/am.png">
+  <div class="name">Армения</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=bahrain')">
+  <img class="flag" src="https://flagcdn.com/w640/bh.png">
+  <div class="name">Бахрейн</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=georgia')">
+  <img class="flag" src="https://flagcdn.com/w640/ge.png">
+  <div class="name">Грузия</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=israel')">
+  <img class="flag" src="https://flagcdn.com/w640/il.png">
+  <div class="name">Израиль</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=bhutan')">
+  <img class="flag" src="https://flagcdn.com/w640/bt.png">
+  <div class="name">Бутан</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=india')">
+  <img class="flag" src="https://flagcdn.com/w640/in.png">
+  <div class="name">Индия</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=maldives')">
+  <img class="flag" src="https://flagcdn.com/w640/mv.png">
+  <div class="name">Мальдивы</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=nepal')">
+  <img class="flag" src="https://flagcdn.com/w640/np.png">
+  <div class="name">Непал</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=pakistan')">
+  <img class="flag" src="https://flagcdn.com/w640/pk.png">
+  <div class="name">Пакистан</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=sri_lanka')">
+  <img class="flag" src="https://flagcdn.com/w640/lk.png">
+  <div class="name">Шри-Ланка</div>
+</div>
+
+</div>
+
+<script>
+function go(page){
+  window.location.href = page;
+}
+</script>
+
+</body>
+</html>

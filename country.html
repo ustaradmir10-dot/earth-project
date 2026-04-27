@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Страна</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b0b0b;
+  color: white;
+}
+
+/* HERO (верх с флагом) */
+.hero {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  font-weight: bold;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #111;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero span {
+  position: relative;
+  z-index: 1;
+}
+
+/* КОНТЕНТ */
+.content {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* БЛОКИ */
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 18px;
+  border-radius: 14px;
+  margin-bottom: 15px;
+}
+
+/* ГАЛЕРЕЯ */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;   /* ❗ НЕ РЕЖЕТ */
+  background: #111;
+  border-radius: 12px;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+/* КНОПКА НАЗАД */
+.back {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: rgba(255,255,255,0.1);
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 10;
+}
+</style>
+</head>
+
+<body>
+
+<div class="back" onclick="history.back()">⬅ Назад</div>
+
+<div class="hero" id="hero"></div>
+
+<div class="content">
+
+<div class="card">
+  <h2>📍 Основное</h2>
+  <p><b>Столица:</b> <span id="capital"></span></p>
+  <p><b>Население:</b> <span id="population"></span></p>
+</div>
+
+<div class="card">
+  <h2>📜 Основание</h2>
+  <p id="foundation"></p>
+</div>
+
+<div class="card">
+  <h2>🏛 История</h2>
+  <p id="history"></p>
+</div>
+
+<div class="card">
+  <h2>💰 Экономика</h2>
+  <p id="economy"></p>
+</div>
+
+<div class="card">
+  <h2>💡 Факты</h2>
+  <p id="facts"></p>
+</div>
+
+<div class="card">
+  <h2>📸 Галерея</h2>
+  <div class="gallery" id="images"></div>
+</div>
+
+</div>
+
+<script src="countries.js"></script>
+
+<script>
+const params = new URLSearchParams(location.search);
+const key = params.get("name");
+const c = countries[key];
+
+if (!c) {
+  document.body.innerHTML = "<h2 style='padding:20px'>Страна не найдена</h2>";
+}
+
+/* HERO */
+const hero = document.getElementById("hero");
+hero.style.backgroundImage = `url(${c.flag})`;
+hero.innerHTML = `<span>${c.name}</span>`;
+
+/* TEXT */
+document.getElementById("capital").innerText = c.capital;
+document.getElementById("population").innerText = c.population;
+document.getElementById("foundation").innerText = c.foundation;
+document.getElementById("history").innerText = c.history;
+document.getElementById("economy").innerText = c.economy;
+document.getElementById("facts").innerText = c.facts;
+
+/* IMAGES */
+const container = document.getElementById("images");
+
+c.images.forEach(src => {
+  const img = document.createElement("img");
+  img.src = src;
+
+  // защита если картинка сломалась
+  img.onerror = () => {
+    img.src = "https://via.placeholder.com/400x250?text=No+Image";
+  };
+
+  container.appendChild(img);
+});
+</script>
+
+</body>
+</html>

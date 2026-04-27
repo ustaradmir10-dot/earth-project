@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Африка</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, #001a2e, #000);
+  color: white;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: rgba(255,255,255,0.1);
+}
+
+.flag {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.name {
+  padding: 10px;
+}
+
+.highlight {
+  border: 2px solid gold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Африка</h1>
+  <p>Выберите страну</p>
+</header>
+
+<div class="container">
+
+<!-- Египет (выделим как главную) -->
+<div class="card highlight" onclick="go('country.html?name=egypt')">
+  <img class="flag" src="https://flagcdn.com/w640/eg.png">
+  <div class="name">Египет</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=nigeria')">
+  <img class="flag" src="https://flagcdn.com/w640/ng.png">
+  <div class="name">Нигерия</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=south_africa')">
+  <img class="flag" src="https://flagcdn.com/w640/za.png">
+  <div class="name">ЮАР</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=kenya')">
+  <img class="flag" src="https://flagcdn.com/w640/ke.png">
+  <div class="name">Кения</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=ethiopia')">
+  <img class="flag" src="https://flagcdn.com/w640/et.png">
+  <div class="name">Эфиопия</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=morocco')">
+  <img class="flag" src="https://flagcdn.com/w640/ma.png">
+  <div class="name">Марокко</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=algeria')">
+  <img class="flag" src="https://flagcdn.com/w640/dz.png">
+  <div class="name">Алжир</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=tunisia')">
+  <img class="flag" src="https://flagcdn.com/w640/tn.png">
+  <div class="name">Тунис</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=libya')">
+  <img class="flag" src="https://flagcdn.com/w640/ly.png">
+  <div class="name">Ливия</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=ghana')">
+  <img class="flag" src="https://flagcdn.com/w640/gh.png">
+  <div class="name">Гана</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=uganda')">
+  <img class="flag" src="https://flagcdn.com/w640/ug.png">
+  <div class="name">Уганда</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=tanzania')">
+  <img class="flag" src="https://flagcdn.com/w640/tz.png">
+  <div class="name">Танзания</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=angola')">
+  <img class="flag" src="https://flagcdn.com/w640/ao.png">
+  <div class="name">Ангола</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=zimbabwe')">
+  <img class="flag" src="https://flagcdn.com/w640/zw.png">
+  <div class="name">Зимбабве</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=madagascar')">
+  <img class="flag" src="https://flagcdn.com/w640/mg.png">
+  <div class="name">Мадагаскар</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=senegal')">
+  <img class="flag" src="https://flagcdn.com/w640/sn.png">
+  <div class="name">Сенегал</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=cameroon')">
+  <img class="flag" src="https://flagcdn.com/w640/cm.png">
+  <div class="name">Камерун</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=ivory_coast')">
+  <img class="flag" src="https://flagcdn.com/w640/ci.png">
+  <div class="name">Кот-д'Ивуар</div>
+</div>
+
+</div>
+
+<script>
+function go(page){
+  window.location.href = page;
+}
+</script>
+
+</body>
+</html>

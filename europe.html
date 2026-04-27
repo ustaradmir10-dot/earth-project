@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Европа</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, #001a2e, #000);
+  color: white;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: rgba(255,255,255,0.1);
+}
+
+.flag {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.name {
+  padding: 10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Европа</h1>
+  <p>Выберите страну</p>
+</header>
+
+<div class="container">
+
+<div class="card" onclick="go('country.html?name=germany')">
+  <img class="flag" src="https://flagcdn.com/w640/de.png">
+  <div class="name">Германия</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=france')">
+  <img class="flag" src="https://flagcdn.com/w640/fr.png">
+  <div class="name">Франция</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=italy')">
+  <img class="flag" src="https://flagcdn.com/w640/it.png">
+  <div class="name">Италия</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=spain')">
+  <img class="flag" src="https://flagcdn.com/w640/es.png">
+  <div class="name">Испания</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=uk')">
+  <img class="flag" src="https://flagcdn.com/w640/gb.png">
+  <div class="name">Великобритания</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=poland')">
+  <img class="flag" src="https://flagcdn.com/w640/pl.png">
+  <div class="name">Польша</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=netherlands')">
+  <img class="flag" src="https://flagcdn.com/w640/nl.png">
+  <div class="name">Нидерланды</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=belgium')">
+  <img class="flag" src="https://flagcdn.com/w640/be.png">
+  <div class="name">Бельгия</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=switzerland')">
+  <img class="flag" src="https://flagcdn.com/w640/ch.png">
+  <div class="name">Швейцария</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=austria')">
+  <img class="flag" src="https://flagcdn.com/w640/at.png">
+  <div class="name">Австрия</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=sweden')">
+  <img class="flag" src="https://flagcdn.com/w640/se.png">
+  <div class="name">Швеция</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=norway')">
+  <img class="flag" src="https://flagcdn.com/w640/no.png">
+  <div class="name">Норвегия</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=finland')">
+  <img class="flag" src="https://flagcdn.com/w640/fi.png">
+  <div class="name">Финляндия</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=denmark')">
+  <img class="flag" src="https://flagcdn.com/w640/dk.png">
+  <div class="name">Дания</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=czech')">
+  <img class="flag" src="https://flagcdn.com/w640/cz.png">
+  <div class="name">Чехия</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=hungary')">
+  <img class="flag" src="https://flagcdn.com/w640/hu.png">
+  <div class="name">Венгрия</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=romania')">
+  <img class="flag" src="https://flagcdn.com/w640/ro.png">
+  <div class="name">Румыния</div>
+</div>
+
+<div class="card" onclick="go('country.html?name=greece')">
+  <img class="flag" src="https://flagcdn.com/w640/gr.png">
+  <div class="name">Греция</div>
+</div>
+
+</div>
+
+<script>
+function go(page){
+  window.location.href = page;
+}
+</script>
+
+</body>
+</html>
